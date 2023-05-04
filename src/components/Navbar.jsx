@@ -10,7 +10,7 @@ const Navbar = () => {
 						Tech<span className="text-lime-500">VillaGe</span>
 					</span>
 				</div>
-				<div className="right flex items-center gap-4">
+				<div className="right flex items-center gap-4 pr-4">
 					<Link to="/" className="nav-link hover:text-lime-300 duration-300">
 						Home
 					</Link>
