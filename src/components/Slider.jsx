@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
+import Silde from "./Silde";
+
 const data = [
 	{
 		id: 1,
@@ -50,23 +52,20 @@ const Slider = () => {
 				className="slider duration-1000"
 				style={{ transform: `translateX(-${100 * currentSlide}vw)` }}>
 				{data.map((image) => (
-					<div
-						className="slide"
-						style={{ backgroundImage: `url(${image.src})` }}
-						key={image.id}></div>
+					<Silde key={image.id} image={image} />
 				))}
 			</div>
 			<div className="btns absolute z-[1] text-gray-50 text-2xl flex gap-10 bottom-20 w-screen justify-center">
 				<button
 					onClick={prevSlide}
-					className="left-btn h-10 w-14 bg-white/40 backdrop-blur-xl flex justify-center items-center hover:bg-white/80 hover:text-black duration-200">
+					className="left-btn h-10 w-16  flex justify-center items-center bg-green-800 hover:bg-green-600">
 					<span>
 						<BsArrowLeft />
 					</span>
 				</button>
 				<button
 					onClick={nextSlide}
-					className="right-btn h-10 w-14 bg-white/40 backdrop-blur-xl flex justify-center items-center hover:bg-white/80 hover:text-black duration-200">
+					className="right-btn h-10 w-16  flex justify-center items-center bg-green-800 hover:bg-green-600">
 					<span>
 						<BsArrowRight />
 					</span>
