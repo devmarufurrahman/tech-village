@@ -110,9 +110,9 @@ const Products = () => {
 				Browse all products
 			</h2>
 			<div className="product-wrapper h-11 w-32 bg-black">
-				{data.map((product) => {
-					<Card key={product.id} product={product} />;
-				})}
+				{data.map((product) => (
+					<Card key={product.id} product={product} />
+				))}
 			</div>
 		</div>
 	);
